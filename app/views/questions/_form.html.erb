@@ -23,13 +23,12 @@
   <div class="my-5 flex flex-col gap-2">
     <%= form.fields_for :answers do |answers_form| %>
     
-    <fieldset data-dynamic-target="answerField" class="flex items-center gap-4">
-      <%= answers_form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-21 w-full" %>
-        <button data-action="dynamic#removeField" class="cursor-pointer block" >
+    <fieldset data-dynamic-target="answerField" class="flex items-center gap-4" data-action="keyup->dynamic#addField keyup->dynamic#removeField" >
+      <%= answers_form.text_field :title,  class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-21 w-full" %>
+        <span data-action="click->dynamic#removeField" class="cursor-pointer block" >
           <%= image_tag "delete.svg", class: "block" %>
-        </button>
+        </span>
     </fieldset>
-
 
     <% end %>
  </div>

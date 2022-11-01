@@ -1,24 +1,8 @@
-# README
+# Dynamic Nested Forms
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Nested Form with dynamic fields implementated with StimulusJS and TailwindCSS
+It allows to add and remove fields using the keyboard or the corresponding buttons.
 
-Things you may want to cover:
+Created by Martin Arce with the valuable help of this article by N Drean:
+https://ndrean.medium.com/dynamic-nested-forms-with-rails-aa537a3ee758
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
