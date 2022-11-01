@@ -13,18 +13,22 @@
 
   <div class="my-5">
     <%= form.label :title %>
-    <%= form.text_area :title, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_area :title, rows: 3, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
 <br>
 <br>
 
 
-  <div class="my-5">
+  <div class="my-5 flex flex-col gap-2">
     <%= form.fields_for :answers do |answers_form| %>
-    <fieldset id="0">
-    <%= answers_form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
- </fieldset>
+    
+    <fieldset data-dynamic-target="answerField" class="flex items-center gap-4">
+      <%= answers_form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-21 w-full" %>
+        <button data-action="dynamic#removeField" class="cursor-pointer block" >
+          <%= image_tag "delete.svg", class: "block" %>
+        </button>
+    </fieldset>
 
 
     <% end %>
@@ -37,7 +41,8 @@
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 
-  <button data-action="dynamic#clicky" class="ml-2 rounded-lg py-3 px-5 bg-pink-300 inline-block font-medium" >+ Answer</button>
+  <button data-action="dynamic#addField" class="ml-2 rounded-lg py-3 px-5 bg-indigo-300 inline-block font-medium" >+ Answer</button>
+
 <% end %>
 
  

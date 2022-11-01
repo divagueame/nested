@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyText
+  title: Right answer
   question: one
 
 two:
-  title: MyText
+  title: Right answer of two
+  question: two
+
+three:
+  title: Wrong answer of two
   question: two
